@@ -1,49 +1,4 @@
-# API Diff between RC2 and 1.0.0 final
 
-API listing follows standard diff formatting. Lines preceded by a '+' are additions and a '-' indicates removal.
-
-- [System](#system)
-- [System.Buffers](#systembuffers)
-- [System.ComponentModel](#systemcomponentmodel)
-- [System.Data.Common](#systemdatacommon)
-- [System.Diagnostics.Tracing](#systemdiagnosticstracing)
-- [System.IO](#systemio)
-- [System.Net.Http](#systemnethttp)
-- [System.Net.Sockets](#systemnetsockets)
-- [System.Reflection](#systemreflection)
-- [System.Reflection.Context](#systemreflectioncontext)
-- [System.Reflection.Metadata](#systemreflectionmetadata)
-- [System.Reflection.Metadata.Decoding](#systemreflectionmetadatadecoding)
-- [System.Reflection.Metadata.Ecma335](#systemreflectionmetadataecma335)
-- [System.Reflection.Metadata.Ecma335.Blobs](#systemreflectionmetadataecma335blobs)
-- [System.Reflection.PortableExecutable](#systemreflectionportableexecutable)
-- [System.Runtime.CompilerServices](#systemruntimecompilerservices)
-- [System.Runtime.InteropServices](#systemruntimeinteropservices)
-- [System.Runtime.Loader](#systemruntimeloader)
-- [System.Security](#systemsecurity)
-- [System.Security.Authentication](#systemsecurityauthentication)
-- [System.Security.Cryptography](#systemsecuritycryptography)
-- [System.Security.Cryptography.Pkcs](#systemsecuritycryptographypkcs)
-- [System.Security.Cryptography.Xml](#systemsecuritycryptographyxml)
-- [System.ServiceModel.Security](#systemservicemodelsecurity)
-- [System.Text.RegularExpressions](#systemtextregularexpressions)
-- [System.Threading.Tasks](#systemthreadingtasks)
-
-## System
-
-```c#
- namespace System {
-+ public class UriTypeConverter : TypeConverter {
-+   public UriTypeConverter();
-+   public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType);
-+   public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType);
-+   public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value);
-+   public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType);
-  }
- }
-```
-
-## System.Buffers
 
 ```c#
  namespace System.Buffers {
