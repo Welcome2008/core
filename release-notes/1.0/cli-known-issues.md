@@ -1,27 +1,6 @@
 # Known issues & workarounds
 
-- [Preview 2 tooling known issues](#preview-2-tooling-known-issues)
-  - [OpenSSL dependency on OS X](#openssl-dependency-on-os-x)
-  - [`brew` refusing to link `openssl`](#brew-refusing-to-link-openssl)
-  - [Running .NET Core CLI on Nano Server](#running-net-core-cli-on-nano-server)
-  - [Users of zsh (z shell) don't get `dotnet` on the path after install](#users-of-zsh-z-shell-dont-get-dotnet-on-the-path-after-install)
-  - [`app.config` file needs to be checked out before publishing](#appconfig-file-needs-to-be-checked-out-before-publishing)
-  - [`dotnet` commands in the root of the file system fails](#dotnet-commands-in-the-root-of-the-file-system-fails)
-  - [On dev builds of the tools, restoring default project from dotnet new fails](#on-dev-builds-of-the-tools-restoring-default-project-from-dotnet-new-fails)
-  - [Running `dotnet` on Debian distributions causes a segmentation fault](#running-dotnet-on-debian-distributions-causes-a-segmentation-fault)
-  - [Uninstalling/reinstalling the PKG on OS X](#uninstallingreinstalling-the-pkg-on-os-x)
-- [Preview 3 tooling known issues](#preview-3-tooling-known-issues)
-  - [Installing VS 2017 RC or dotnet CLI preview3 prevents Visual Studio 2015 .NET Core tooling from working](#installing-vs-2017-rc-or-dotnet-cli-preview3-prevents-visual-studio-2015-net-core-tooling-from-working)
-  - [Restore required before using the .NET Core tooling Preview 3](#restore-required-before-using-the-net-core-tooling-preview-3)
-  - [`dotnet test` has changed from Preview 2 `dotnet test`](#dotnet-test-has-changed-from-preview-2-dotnet-test)
-- [What is this document about?](#what-is-this-document-about)
-- [What is a "known issue"?](#what-is-a-known-issue)
-
-## Preview 2 tooling known issues
-
-### OpenSSL dependency on OS X
-
-OS X "El Capitan" (10.11) comes with 0.9.8 version of OpenSSL. .NET Core depends on versions >= 1.0.1 of OpenSSL. You can update the version by using [Homebrew](https://brew.sh), [MacPorts](https://www.macports.org/) or manually. The important bit is that you need to have the required OpenSSL version on the path when you work with .NET Core.
+- [the required OpenSSL version on the path when you work with .NET Core.
 
 With Homebrew, you can run the following commands to get this done:
 
