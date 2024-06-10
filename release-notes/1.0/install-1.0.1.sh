@@ -78,23 +78,7 @@ if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
             echo
             echo "Directory "$tmp_dir" already exists and needs to be cleaned before proceding."
             echo
-            read -p "Clean up temporary files and locations used by this script (y/n)?" answer
-
-            if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
-                cd ~
-                sudo rm -r tmp-update/ 
-                istmpclean=1 #tmp_dir removed
-                echo $tmp_dir "removed."
-                echo
-            else
-                istmpclean=0 #tmp_dir not removed
-                echo "Cancelling temporary files and location clean up and exiting install."
-                echo ========================================================================
-                echo
-            fi # clean tmp_dir
-        else
-            istmpclean=1 #tmp_dir not found
-        fi # exists tmp_dir
+            
         
         if [ $istmpclean == 1 ]; then
             # create ~/tmp-update and cd
@@ -128,21 +112,3 @@ if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
             if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
                 cd ~
                 sudo rm -r tmp-update/ 
-                echo $tmp_dir "removed."
-                echo
-            else
-                echo
-                echo "Cancelling temporary files and location clean up and exiting install."
-                echo ========================================================================
-                echo
-            fi #tmp file cleanup after successful install
-        else
-            echo "tmp_dir needs to be cleaned up before attempting to install."
-        fi # tmpclean check
-    fi # 1.0.1 installed
-else #top level install decision
-    echo
-	echo "Exiting install."
-    echo ===========================================
-    echo
-fi #top level install decision
